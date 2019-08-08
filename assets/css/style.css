@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+
+/*------------------------
+  TODO
+  - font-family
+  - class名見直し
+  - CSSのプロパティ見直し
+------------------------*/
+
+
+/*------------------------
+  common
+------------------------*/
+.is-halfWidth {
+  width: 50%;
+}
+
+.is-fullWidth {
+  width: 100%;
+}
+
+.wrapper {
+  background-color: #f2f6f7;
+  padding: 32px 0;
+  width: 100%;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 640px;
+}
+
+.link-color {
+  color: #01a6a4;
+}
+
+/*--- ボタンパーツ ---*/
+.button-init {
+  text-decoration: none;
+}
+
+.button {
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 500;
+  height: 36px;
+  justify-content: center;
+  line-height: 34px;
+}
+
+.main-content {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .18);
+  box-sizing: border-box;
+  margin-bottom: 32px;
+  padding: 48px 64px;
+}
+
+.page-title {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/*--- Start with SNS ---*/
+.columns {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.column:last-child {
+  margin-left: 8px;
+}
+
+.is-facebook {
+  background-color: #3b5999;
+  border-color: #3b5999;
+  color: #fff;
+}
+
+.is-facebook:hover {
+  background-color: #344e87;
+  border-color: transparent;
+}
+
+.is-google {
+  background-color: #fff;
+  color: #dd4b39;
+}
+
+.is-google:hover {
+  background-color: #f7f7f7;
+}
+
+.supplement-text {
+  color: #949697;
+  font-size: 12px;
+  text-align: center;
+}
+
+.devider {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.devider p {
+  background-color: #fff;
+  color: #949697;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.devider::before {
+  background-color: #ececec;
+  content: '';
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+/*------------------------
+  form
+------------------------*/
+
+.input-init {
+  outline: none;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.label-text {
+  color: #545658;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.input-area {
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 13px;
+  height: 36px;
+  line-height: 24px;
+  width: 100%;
+}
+
+.input-area:focus {
+  background-color: #fff;
+  border-color: rgba(59, 133, 133, .4);
+  box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
+}
+
+.name {
+  margin-left: 16px;
+}
+
+.name:first-child {
+  margin-left: 0;
+}
+
+.agreement {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+
+/*------------------------
+  foot
+------------------------*/
+.foot-part p {
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.foot-part p:last-child {
+  margin-bottom: 0;
+}
+
+.foot-part a {
+  border-bottom: 1px solid #ececec;
+  box-sizing: border-box;
+  line-height: 16px;
+}
+
+.foot-part a:hover {
+  border-bottom-color: #01a6a4;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formレイアウト</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <section class="wrapper">
+    <div class="inner">
+      <div class="main-content">
+        <h2 class="page-title">ユーザーアカウント作成</h2>
+        <div class="columns">
+          <div class="column is-halfWidth">
+            <a href="#" class="button button-init is-fullWidth is-facebook">Facebookでスタート</a>
+          </div>
+          <div class="column is-halfWidth">
+            <a href="#" class="button button-init is-fullWidth is-google">Googleでスタート</a>
+          </div>
+        </div>
+        <p class="supplement-text">タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。</p>
+        <div class="devider">
+          <p>アカウント情報</p>
+        </div>
+        <form class="form-content" action="#" method="POST">
+          <div class="row">
+            <div class="name is-halfWidth">
+              <label class="label-text" for="last_name">名字</label>
+                <input type="text" id="last_name" class="input-init input-area">
+            </div>
+            <div class="name is-halfWidth">
+              <label class="label-text" for="first_name">名前</label>
+              <input type="text" id="first_name" class="input-init input-area">
+            </div>
+          </div>
+          <div class="row">
+            <!-- 縦並び or 横並び -->
+            <label>
+              <input type="radio" name="gender" value="male" class="gender-radio">
+              <span>男性</span>
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female" class="gender-radio">
+              <span>女性</span>
+            </label>
+            <label>
+              <input type="radio" name="gender" value="other" class="gender-radio">
+              <span>その他</span>
+            </label>
+          </div>
+          <div class="row"></div>
+          <div class="row"></div>
+          <div class="row"></div>
+          <div class="row"></div>
+          <div class="row"></div>
+          <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
+        </form>
+      </div>
+      <div class="foot-part">
+        <p>すでにアカウントをお持ちですか？ <a class="link-color" href>ログイン</a></p>
+        <p><a class="link-color" href>認証メールが届きませんか？</a></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
