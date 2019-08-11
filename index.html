@@ -29,33 +29,49 @@
           <div class="row">
             <div class="name is-halfWidth">
               <label class="label-text" for="last_name">名字</label>
-                <input type="text" id="last_name" class="input-init input-area">
+              <input type="text" id="last_name" class="input-init input-area">
             </div>
             <div class="name is-halfWidth">
               <label class="label-text" for="first_name">名前</label>
               <input type="text" id="first_name" class="input-init input-area">
             </div>
           </div>
-          <div class="row">
+          <div class="row gender">
+            <p class="label-text is-fullWidth">性別</p>
             <!-- 縦並び or 横並び -->
-            <label>
-              <input type="radio" name="gender" value="male" class="gender-radio">
-              <span>男性</span>
-            </label>
-            <label>
-              <input type="radio" name="gender" value="female" class="gender-radio">
-              <span>女性</span>
-            </label>
-            <label>
-              <input type="radio" name="gender" value="other" class="gender-radio">
-              <span>その他</span>
-            </label>
+            <div class="gender-contents">
+              <label class="gender-content">
+                <input type="radio" name="gender" value="male" class="gender-radio">
+                <span>男性</span>
+              </label>
+              <label class="gender-content">
+                <input type="radio" name="gender" value="female" class="gender-radio">
+                <span>女性</span>
+              </label>
+              <label class="gender-content">
+                <input type="radio" name="gender" value="other" class="gender-radio">
+                <span>その他</span>
+              </label>
+            </div>
+          </div>
+          <div class="row origin">
+            <label for="origin" class="label-text">出身</label>
+            <select name="origin" id="origin" class="input-init">
+              <option value="東京">東京</option>
+              <option value="千葉">千葉</option>
+              <option value="埼玉">埼玉</option>
+              <option value="神奈川">神奈川</option>
+            </select>
+          </div>
+          <div class="row email">
+            <label class="label-text" for="email">Eメール</label>
+            <input type="text" class="input-init input-area is-fullWidth" name="email" placeholder="ex) hoge@example.com">
           </div>
           <div class="row"></div>
           <div class="row"></div>
-          <div class="row"></div>
-          <div class="row"></div>
-          <div class="row"></div>
+          <div class="row">
+            <input type="submit" value="アカウント作成" class="input-init button submit-btn is-fullWidth">
+          </div>
           <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
         </form>
       </div>

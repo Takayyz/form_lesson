@@ -35,6 +35,10 @@
   color: #01a6a4;
 }
 
+.link-color:hover {
+  color: #01bfbd;
+}
+
 /*--- ボタンパーツ ---*/
 .button-init {
   text-decoration: none;
@@ -50,6 +54,8 @@
   height: 36px;
   justify-content: center;
   line-height: 34px;
+  transition: .3s;
+  cursor: pointer;
 }
 
 .main-content {
@@ -132,7 +138,13 @@
 ------------------------*/
 
 .input-init {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  border: none;
   outline: none;
+  background: transparent;
 }
 
 .row {
@@ -155,6 +167,7 @@
   font-size: 13px;
   height: 36px;
   line-height: 24px;
+  padding: 5px;
   width: 100%;
 }
 
@@ -164,6 +177,7 @@
   box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
 }
 
+/* 名前 */
 .name {
   margin-left: 16px;
 }
@@ -172,6 +186,79 @@
   margin-left: 0;
 }
 
+/* 性別 */
+.gender {
+  display: block;
+}
+
+.gender-contents {
+  display: flex;
+}
+
+.gender-content {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.gender-content:first-child {
+  margin-left: 0;
+}
+
+.gender-content input {
+  display: none;
+}
+
+.gender-content span {
+  display: inline-block;
+  padding: 3px 3px 3px 20px;
+  position: relative;
+}
+
+.gender-content span::before {
+  position: absolute;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  border-radius: 50%;
+  content: '';
+}
+
+.gender-radio:checked + span::after {
+  position: absolute;
+  background-color: #01bfbd;
+  top: 50%;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 50%;
+  content: '';
+}
+
+/* Email */
+.email {
+  display: block;
+}
+
+.origin {
+  display: block;
+}
+
+/* 送信ボタン */
+.submit-btn {
+  background-color: #01bfbd;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #01a6a4;
+}
+
+/* 利用規約 */
 .agreement {
   font-size: 12px;
   line-height: 16px;
