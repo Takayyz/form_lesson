@@ -39,6 +39,10 @@
   color: #01bfbd;
 }
 
+.alert {
+  color: #dd4b39;
+}
+
 /*--- ボタンパーツ ---*/
 .button-init {
   text-decoration: none;
@@ -239,15 +243,43 @@
   content: '';
 }
 
+/* 出身 */
+.origin {
+  display: block;
+}
+
+.select-area {
+  position: relative;
+}
+
+.select-area::after {
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  transform: rotate(45deg);
+}
+
+.input-origin:focus {
+  background-color: #fbfbfb;
+  border-color: #d9d9d9;
+  box-shadow: initial;
+}
+
 /* Email */
 .email {
   display: block;
 }
 
-.origin {
+/* 電話番号 */
+.tel {
   display: block;
 }
-
 /* 送信ボタン */
 .submit-btn {
   background-color: #01bfbd;

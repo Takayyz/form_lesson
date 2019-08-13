@@ -28,12 +28,12 @@
         <form class="form-content" action="#" method="POST">
           <div class="row">
             <div class="name is-halfWidth">
-              <label class="label-text" for="last_name">名字</label>
-              <input type="text" id="last_name" class="input-init input-area">
+              <label class="label-text" for="last_name">名字<span class="alert"> ※</span></label>
+              <input type="text" id="last_name" class="input-init input-area" required>
             </div>
             <div class="name is-halfWidth">
-              <label class="label-text" for="first_name">名前</label>
-              <input type="text" id="first_name" class="input-init input-area">
+              <label class="label-text" for="first_name">名前<span class="alert"> ※</span></label>
+              <input type="text" id="first_name" class="input-init input-area" required>
             </div>
           </div>
           <div class="row gender">
@@ -54,20 +54,25 @@
               </label>
             </div>
           </div>
-          <div class="row origin">
-            <label for="origin" class="label-text">出身</label>
-            <select name="origin" id="origin" class="input-init">
-              <option value="東京">東京</option>
-              <option value="千葉">千葉</option>
-              <option value="埼玉">埼玉</option>
-              <option value="神奈川">神奈川</option>
-            </select>
+          <div class="row origin is-halfWidth">
+            <p for="origin" class="label-text">出身</p>
+            <div class="select-area">
+              <select name="origin" id="origin" class="input-init input-area input-origin">
+                <option value="東京">東京</option>
+                <option value="千葉">千葉</option>
+                <option value="埼玉">埼玉</option>
+                <option value="神奈川">神奈川</option>
+              </select>
+            </div>
           </div>
           <div class="row email">
-            <label class="label-text" for="email">Eメール</label>
-            <input type="text" class="input-init input-area is-fullWidth" name="email" placeholder="ex) hoge@example.com">
+            <label class="label-text" for="email">Eメール<span class="alert"> ※</span></label>
+            <input type="email" class="input-init input-area is-fullWidth" name="email" placeholder="ex) hoge@example.com" required>
           </div>
-          <div class="row"></div>
+          <div class="row tel">
+            <label class="label-text" for="tel">電話番号</label>
+            <input type="tel" class="input-init input-area is-fullWidth" name="tel" placeholder="ex) 09012345678">
+          </div>
           <div class="row"></div>
           <div class="row">
             <input type="submit" value="アカウント作成" class="input-init button submit-btn is-fullWidth">
