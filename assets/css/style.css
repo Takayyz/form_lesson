@@ -6,6 +6,10 @@
   - font-family
   - class名見直し
   - CSSのプロパティ見直し
+  - flexの解除してる箇所CSS統一
+
+  - 複数チェック欄
+  - 備考欄
 ------------------------*/
 
 
@@ -149,6 +153,7 @@
   border: none;
   outline: none;
   background: transparent;
+  resize: none;
 }
 
 .row {
@@ -280,6 +285,15 @@
 .tel {
   display: block;
 }
+
+.remarks {
+  display: block;
+}
+
+.remarks .input-area {
+  height: 100px;
+}
+
 /* 送信ボタン */
 .submit-btn {
   background-color: #01bfbd;
