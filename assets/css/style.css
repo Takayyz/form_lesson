@@ -161,6 +161,10 @@
   margin-bottom: 20px;
 }
 
+.gender, .origin, .email, .tel, .password, .remarks, .course {
+  display: block;
+}
+
 .label-text {
   color: #545658;
   display: block;
@@ -196,9 +200,9 @@
 }
 
 /* 性別 */
-.gender {
+/* .gender {
   display: block;
-}
+} */
 
 .gender-contents {
   display: flex;
@@ -249,9 +253,9 @@
 }
 
 /* 出身 */
-.origin {
+/* .origin {
   display: block;
-}
+} */
 
 .select-area {
   position: relative;
@@ -276,20 +280,7 @@
   box-shadow: initial;
 }
 
-/* Email */
-.email {
-  display: block;
-}
-
-/* 電話番号 */
-.tel {
-  display: block;
-}
-
-.remarks {
-  display: block;
-}
-
+/* 備考 */
 .remarks .input-area {
   height: 100px;
 }
@@ -314,22 +305,22 @@
 /*------------------------
   foot
 ------------------------*/
-.foot-part p {
-  font-size: 12px;
-  margin-bottom: 8px;
+.foot-part {
   text-align: center;
 }
 
-.foot-part p:last-child {
-  margin-bottom: 0;
-}
-
-.foot-part a {
-  border-bottom: 1px solid #ececec;
-  box-sizing: border-box;
+.foot-part p, .resend-mail {
+  font-size: 12px;
   line-height: 16px;
+  margin-bottom: 8px;
 }
 
 .foot-part a:hover {
-  border-bottom-color: #01a6a4;
+  border-bottom: 1px solid #ececec;
+  box-sizing: border-box;
+  border-bottom-color: #01bfbd;
+}
+
+.resend-mail {
+  display: inline-block;
 }
