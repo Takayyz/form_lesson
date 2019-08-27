@@ -7,9 +7,6 @@
   - class名見直し
   - CSSのプロパティ見直し
   - flexの解除してる箇所CSS統一
-
-  - 複数チェック欄
-  - 備考欄
 ------------------------*/
 
 
@@ -190,7 +187,11 @@
   box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
 }
 
-/* 名前 */
+.gender-content input, .course input {
+  display: none;
+}
+
+/*--- 名前 ---*/
 .name {
   margin-left: 16px;
 }
@@ -199,13 +200,11 @@
   margin-left: 0;
 }
 
-/* 性別 */
-/* .gender {
-  display: block;
-} */
-
+/*--- 性別 ---*/
 .gender-contents {
   display: flex;
+  color: #545658;
+  font-size: 16px;
 }
 
 .gender-content {
@@ -215,10 +214,6 @@
 
 .gender-content:first-child {
   margin-left: 0;
-}
-
-.gender-content input {
-  display: none;
 }
 
 .gender-content span {
@@ -252,11 +247,7 @@
   content: '';
 }
 
-/* 出身 */
-/* .origin {
-  display: block;
-} */
-
+/*--- 出身 ---*/
 .select-area {
   position: relative;
 }
@@ -280,12 +271,52 @@
   box-shadow: initial;
 }
 
-/* 備考 */
+/*--- 希望コース ---*/
+.course-option {
+  color: #545658;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.course-option:last-child {
+  margin-bottom: 0;
+}
+
+.course-option-text {
+  position: relative;
+  padding-left: 25px;
+}
+
+.course-option-text::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: '';
+  height: 15px;
+  width: 15px;
+  margin-top: -8px;
+  border: 1px solid #d9d9d9;
+}
+
+.course-option input:checked + .course-option-text::after {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  height: 16px;
+  width: 8px;
+  margin-top: -12px;
+  border-right: 3px solid #01bfbd;
+  border-bottom: 3px solid #01bfbd;
+  content: '';
+  transform: rotate(45deg);
+}
+
+/*--- 備考 ---*/
 .remarks .input-area {
   height: 100px;
 }
 
-/* 送信ボタン */
+/*--- 送信ボタン ---*/
 .submit-btn {
   background-color: #01bfbd;
   color: #fff;
@@ -295,7 +326,7 @@
   background-color: #01a6a4;
 }
 
-/* 利用規約 */
+/*--- 利用規約 ---*/
 .agreement {
   font-size: 12px;
   line-height: 16px;
