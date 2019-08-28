@@ -1,18 +1,6 @@
 @charset "utf-8";
 
-
-/*------------------------
-  TODO
-  - font-family
-  - class名見直し
-  - CSSのプロパティ見直し
-  - flexの解除してる箇所CSS統一
-------------------------*/
-
-
-/*------------------------
-  common
-------------------------*/
+/*--- common style ---*/
 .is-halfWidth {
   width: 50%;
 }
@@ -21,17 +9,16 @@
   width: 100%;
 }
 
-.wrapper {
-  background-color: #f2f6f7;
-  padding: 32px 0;
-  width: 100%;
+.is-defaultText {
+  color: #949697;
+  font-size: 12px;
 }
 
-.inner {
-  margin: 0 auto;
-  width: 640px;
+.alert {
+  color: #dd4b39;
 }
 
+/*--- リンク ---*/
 .link-color {
   color: #01a6a4;
 }
@@ -40,44 +27,53 @@
   color: #01bfbd;
 }
 
-.alert {
-  color: #dd4b39;
-}
-
 /*--- ボタンパーツ ---*/
 .button-init {
   text-decoration: none;
 }
 
 .button {
-  border: 1px solid #d9d9d9;
-  border-radius: 3px;
   box-sizing: border-box;
   display: inline-flex;
+  justify-content: center;
+  transition: .3s;
+  height: 36px;
   font-size: 13px;
   font-weight: 500;
-  height: 36px;
-  justify-content: center;
   line-height: 34px;
-  transition: .3s;
   cursor: pointer;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;}
+/*--- common style end ---*/
+
+.wrapper {
+  padding: 32px 0;
+  width: 100%;
+  background-color: #f2f6f7;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 640px;
 }
 
 .main-content {
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .18);
   box-sizing: border-box;
   margin-bottom: 32px;
   padding: 48px 64px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .18);
 }
 
-.page-title {
-  margin-bottom: 24px;
+.form-title {
   text-align: center;
+  margin-bottom: 24px;
+  color: #545658;
+  font-size: 24px;
 }
 
-/*--- Start with SNS ---*/
+/*--- SNS part ---*/
 .columns {
   display: flex;
   margin-bottom: 8px;
@@ -88,9 +84,9 @@
 }
 
 .is-facebook {
+  color: #fff;
   background-color: #3b5999;
   border-color: #3b5999;
-  color: #fff;
 }
 
 .is-facebook:hover {
@@ -99,8 +95,8 @@
 }
 
 .is-google {
-  background-color: #fff;
   color: #dd4b39;
+  background-color: #fff;
 }
 
 .is-google:hover {
@@ -108,77 +104,66 @@
 }
 
 .supplement-text {
-  color: #949697;
-  font-size: 12px;
   text-align: center;
 }
 
 .devider {
-  margin: 20px 0;
-  text-align: center;
   position: relative;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .devider p {
-  background-color: #fff;
-  color: #949697;
   display: inline-block;
-  font-size: 12px;
-  padding: 0 10px;
   position: relative;
+  padding: 0 10px;
+  background-color: #fff;
 }
 
 .devider::before {
-  background-color: #ececec;
-  content: '';
-  height: 1px;
-  width: 100%;
   position: absolute;
   left: 0;
   top: 50%;
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #ececec;
 }
 
-/*------------------------
-  form
-------------------------*/
-
+/*--- form part ---*/
 .input-init {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding: 0;
+  background: transparent;
   border: none;
   outline: none;
-  background: transparent;
   resize: none;
 }
 
 .row {
-  display: flex;
   margin-bottom: 20px;
 }
 
-.gender, .origin, .email, .tel, .password, .remarks, .course {
-  display: block;
-}
-
 .label-text {
-  color: #545658;
   display: block;
-  font-size: 12px;
   margin-bottom: 5px;
+  font-size: 12px;
+  color: #545658;
 }
 
 .input-area {
+  box-sizing: border-box;
+  height: 36px;
+  width: 100%;
+  padding: 5px;
+  color: #545658;
+  font-size: 13px;
+  line-height: 24px;
   background-color: #fbfbfb;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
-  box-sizing: border-box;
-  font-size: 13px;
-  height: 36px;
-  line-height: 24px;
-  padding: 5px;
-  width: 100%;
 }
 
 .input-area:focus {
@@ -192,6 +177,10 @@
 }
 
 /*--- 名前 ---*/
+.name-box {
+  display: flex;
+}
+
 .name {
   margin-left: 16px;
 }
@@ -217,34 +206,34 @@
 }
 
 .gender-content span {
+  position: relative;
   display: inline-block;
   padding: 3px 3px 3px 20px;
-  position: relative;
 }
 
 .gender-content span::before {
+  content: '';
   position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+  height: 14px;
+  width: 14px;
   background-color: #fbfbfb;
   border: 1px solid #d9d9d9;
-  top: 50%;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  margin-top: -8px;
   border-radius: 50%;
-  content: '';
 }
 
-.gender-radio:checked + span::after {
+.gender-input:checked + span::after {
+  content: '';
   position: absolute;
-  background-color: #01bfbd;
-  top: 50%;
   left: 4px;
-  width: 8px;
+  top: 50%;
   height: 8px;
+  width: 8px;
   margin-top: -4px;
   border-radius: 50%;
-  content: '';
+  background-color: #01bfbd;
 }
 
 /*--- 出身 ---*/
@@ -253,19 +242,19 @@
 }
 
 .select-area::after {
+  content: '';
   display: inline-block;
   position: absolute;
-  top: 45%;
   right: 10px;
-  content: '';
-  width: 5px;
+  top: 45%;
+  transform: rotate(45deg);
   height: 5px;
+  width: 5px;
   border-right: 2px solid #d9d9d9;
   border-bottom: 2px solid #d9d9d9;
-  transform: rotate(45deg);
 }
 
-.input-origin:focus {
+.origin-input:focus {
   background-color: #fbfbfb;
   border-color: #d9d9d9;
   box-shadow: initial;
@@ -273,9 +262,9 @@
 
 /*--- 希望コース ---*/
 .course-option {
+  margin-bottom: 10px;
   color: #545658;
   font-size: 16px;
-  margin-bottom: 10px;
 }
 
 .course-option:last-child {
@@ -288,10 +277,10 @@
 }
 
 .course-option-text::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
   content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
   height: 15px;
   width: 15px;
   margin-top: -8px;
@@ -299,16 +288,16 @@
 }
 
 .course-option input:checked + .course-option-text::after {
+  content: '';
   position: absolute;
-  top: 50%;
   left: 6px;
+  top: 50%;
+  transform: rotate(45deg);
   height: 16px;
   width: 8px;
   margin-top: -12px;
   border-right: 3px solid #01bfbd;
   border-bottom: 3px solid #01bfbd;
-  content: '';
-  transform: rotate(45deg);
 }
 
 /*--- 備考 ---*/
@@ -326,6 +315,12 @@
   background-color: #01a6a4;
 }
 
+.submit-btn:active {
+  background-color: #fff;
+  color: #01a6a4;
+  border: 1px solid #d9d9d9;
+}
+
 /*--- 利用規約 ---*/
 .agreement {
   font-size: 12px;
@@ -333,22 +328,20 @@
 }
 
 
-/*------------------------
-  foot
-------------------------*/
+/*--- foot part---*/
 .foot-part {
   text-align: center;
 }
 
 .foot-part p, .resend-mail {
-  font-size: 12px;
-  line-height: 16px;
   margin-bottom: 8px;
+  line-height: 16px;
+  font-size: 12px;
 }
 
 .foot-part a:hover {
-  border-bottom: 1px solid #ececec;
   box-sizing: border-box;
+  border-bottom: 1px solid #ececec;
   border-bottom-color: #01bfbd;
 }
 
