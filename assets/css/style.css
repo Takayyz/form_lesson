@@ -34,16 +34,16 @@
 
 .button {
   box-sizing: border-box;
-  display: inline-flex;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
   transition: .3s;
-  height: 36px;
+  padding: 13px;
   font-size: 13px;
   font-weight: 500;
-  line-height: 34px;
   cursor: pointer;
   border: 1px solid #d9d9d9;
-  border-radius: 3px;}
+  border-radius: 3px;
+}
 /*--- common style end ---*/
 
 .wrapper {
@@ -121,10 +121,11 @@
 }
 
 .devider::before {
+  content: '';
   position: absolute;
   left: 0;
   top: 50%;
-  content: '';
+  transform: translateY(-50%);
   height: 1px;
   width: 100%;
   background-color: #ececec;
@@ -160,7 +161,7 @@
   padding: 5px;
   color: #545658;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 2;
   background-color: #fbfbfb;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
@@ -216,7 +217,7 @@
   position: absolute;
   left: 0;
   top: 50%;
-  margin-top: -8px;
+  transform: translateY(-50%);
   height: 14px;
   width: 14px;
   background-color: #fbfbfb;
@@ -231,7 +232,7 @@
   top: 50%;
   height: 8px;
   width: 8px;
-  margin-top: -4px;
+  transform: translateY(-50%);
   border-radius: 50%;
   background-color: #01bfbd;
 }
@@ -307,6 +308,7 @@
 
 /*--- 送信ボタン ---*/
 .submit-btn {
+  padding: 13px;
   background-color: #01bfbd;
   color: #fff;
 }
