@@ -7,7 +7,7 @@
 - ・実際のWEBページで見かけるような登録フォームを実際に作る
 
 作るものは、下記URLで表示されるものと同じものです。  
-<a href="http://gizumo-inc.github.io/sample/front-lesson/form_lesson/" target="_blank">http://gizumo-inc.github.io/sample/front-lesson/form_lesson/</a>
+<a href="http://gizumo-inc.github.io/sample/front-lesson/form_lesson/" target="_blank">http://gizumo-inc.github.io/sample/front-lesson/form_section/</a>
 
 
 
@@ -15,7 +15,7 @@
 
 <a href="http://giztech.gizumo-inc.work/categories/4/157" target="_blank">Lesson6「Gitの実践 ~ Sourcetreeの使い方 ~」</a>を参考に以下の手順で行ってみましょう。
 
-1.　<a href="https://github.com/gizumo-inc/form_lesson" target="_blank">https://github.com/gizumo-inc/form_lesson</a>にアクセス  
+1.　<a href="https://github.com/gizumo-inc/form_section" target="_blank">https://github.com/gizumo-inc/form_section</a>にアクセス  
 2.　画面右上にある「 <span style="color: red; font-weight: bold;">Fork</span> 」というボタンからフォークする  
 3.　自分の**github**のページに「 <span style="color: red; font-weight: bold;">form_lesson</span> 」というリポジトリができる  
 4.　そのリポジトリの「 <span style="color: red; font-weight: bold;">Clone or Download</span> 」というボタンからURLをコピーする  
