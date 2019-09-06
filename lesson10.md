@@ -31,7 +31,11 @@
 
 - **form_lesson**フォルダの中の**index.html**と**css/style.css**に記述してください。  
 
+- ボタンを押した時の見た目などサンプルをよく確認して実装しましょう。
+
 - ページが完成したらレビューを行います。
+
+- この問題のスタイルはデベロッパーツールで確認して欲しいのですが、プロパティひとつひとつがどんな役割を持っているのかを理解する事を意識して取り組みましょう。
 
 - ここまで来た皆さんは調べる力もだいぶついてきたと思います。引き続きわからないところはとりあえずググる。  
 <span style="color: red; font-weight: bold;">それでもわからなければ、躊躇せずどんどん質問しましょう。</span>
@@ -59,5 +63,5 @@
 - ::before
 - ::after
 
-
-![フォームサンプル](./assets/img/lesson10.jpg)
+### **完成例**
+![フォームサンプル](https://res.cloudinary.com/gizumo-inc/image/upload/v1567762261/curriculums/Front%20lesson/form-lesson/form-sample.png)
