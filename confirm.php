@@ -1,10 +1,31 @@
+<?php
+$inputs = $_POST;
+$inputs['gender'] = genderToJp($inputs['gender']);
+
+
+
+
+function genderToJp($gender)
+{
+    switch ($gender) {
+        case 'male':
+            return '男性';
+        case 'female':
+            return '女性';
+        case 'other':
+            return 'その他';
+        default:
+            break;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>登録画面</title>
+    <title>確認画面</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -13,50 +34,24 @@
     <section class="wrapper">
       <div class="inner">
         <div class="main-content">
-          <h1 class="form-title">アカウント作成</h1>
-          <div class="columns">
-            <div class="column is-halfWidth">
-              <a href="#" class="button-init button is-fullWidth is-facebook">Facebookでスタート</a>
-            </div>
-            <div class="column is-halfWidth">
-              <a href="#" class="button-init button is-fullWidth is-google">Googleでスタート</a>
-            </div>
-          </div>
-          <p class="supplement-text is-defaultText">タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。</p>
-          <div class="devider">
-            <p class="is-defaultText">アカウント情報</p>
-          </div>
-          <form class="form-content" action="./confirm.php" method="POST">
+          <h1 class="form-title">入力情報確認</h1>
+          <form class="form-content" action="#" method="POST">
             <!-- 名前 -->
             <div class="row name-box">
               <div class="name is-halfWidth">
                 <p class="label-text">名字<span class="alert"> ※</span></p>
-                <input type="text" name="lastName" class="input-init input-area" required>
-              </div>
-              <div class="name is-halfWidth">
+                <p class="text"><?= $inputs['lastName'] ?></p>
+            </div>
+            <div class="name is-halfWidth">
                 <p class="label-text">名前<span class="alert"> ※</span></p>
-                <input type="text" name="firstName" class="input-init input-area" required>
+                <p class="text"><?= $inputs['firstName'] ?></p>
               </div>
             </div>
 
             <!-- 性別 -->
             <div class="row gender">
               <p class="label-text is-fullWidth">性別</p>
-              <!-- 縦並び or 横並び -->
-              <div class="gender-contents">
-                <label class="gender-content">
-                  <input type="radio" name="gender" value="male" class="gender-input">
-                  <span>男性</span>
-                </label>
-                <label class="gender-content">
-                  <input type="radio" name="gender" value="female" class="gender-input">
-                  <span>女性</span>
-                </label>
-                <label class="gender-content">
-                  <input type="radio" name="gender" value="other" class="gender-input">
-                  <span>その他</span>
-                </label>
-              </div>
+              <p class="text"><?= $inputs['gender'] ?></p>
             </div>
 
             <!-- 出身 -->
@@ -119,14 +114,10 @@
 
             <!-- 送信ボタン -->
             <div class="row">
-              <input type="submit" value="アカウント作成" class="input-init button submit-btn is-fullWidth">
+              <input type="submit" value="登録" class="input-init button submit-btn is-fullWidth">
             </div>
             <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
           </form>
-        </div>
-        <div class="foot-part">
-          <p>すでにアカウントをお持ちですか？ <a class="link-color" href>ログイン</a></p>
-          <a class="link-color resend-mail" href>認証メールが届きませんか？</a>
         </div>
       </div>
     </section>
