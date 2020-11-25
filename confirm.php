@@ -41,8 +41,8 @@ function genderToJp($gender)
               <div class="name is-halfWidth">
                 <p class="label-text">名字<span class="alert"> ※</span></p>
                 <p class="text"><?= $inputs['lastName'] ?></p>
-            </div>
-            <div class="name is-halfWidth">
+              </div>
+              <div class="name is-halfWidth">
                 <p class="label-text">名前<span class="alert"> ※</span></p>
                 <p class="text"><?= $inputs['firstName'] ?></p>
               </div>
