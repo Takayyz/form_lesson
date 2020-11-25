@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -14,7 +17,7 @@
       <div class="inner">
         <div class="main-content">
           <h1 class="form-title">登録完了</h1>
-          <p>さん、登録ありがとうございました。</p>
+          <p><?= htmlspecialchars($_SESSION['inputs']['lastName']) . ' ' . htmlspecialchars($_SESSION['inputs']['firstName']); ?>さん、登録ありがとうございました。</p>
         </div>
       </div>
     </section>

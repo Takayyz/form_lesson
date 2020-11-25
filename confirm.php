@@ -1,9 +1,9 @@
 <?php
+session_start();
 $inputs = $_POST;
 $inputs['gender'] = genderToJp($inputs['gender']);
-
-
-
+$inputs['course'] = courseToJp($inputs['course']);
+$_SESSION['inputs'] = $inputs;
 
 function genderToJp($gender)
 {
@@ -14,6 +14,20 @@ function genderToJp($gender)
             return '女性';
         case 'other':
             return 'その他';
+        default:
+            break;
+    }
+}
+
+function courseToJp($course)
+{
+    switch ($course) {
+        case 'frontend':
+            return 'フロントエンド';
+        case 'backend':
+            return 'バックエンド';
+        case 'app':
+            return 'アプリ';
         default:
             break;
     }
@@ -35,7 +49,7 @@ function genderToJp($gender)
       <div class="inner">
         <div class="main-content">
           <h1 class="form-title">入力情報確認</h1>
-          <form class="form-content" action="#" method="POST">
+          <form class="form-content" action="./thanks.php" method="POST">
             <!-- 名前 -->
             <div class="row name-box">
               <div class="name is-halfWidth">
@@ -57,59 +71,37 @@ function genderToJp($gender)
             <!-- 出身 -->
             <div class="row origin is-halfWidth">
               <p class="label-text">出身</p>
-              <div class="select-area">
-                <select name="origin" id="origin" class="input-init input-area origin-input">
-                  <option value="東京">東京</option>
-                  <option value="千葉">千葉</option>
-                  <option value="埼玉">埼玉</option>
-                  <option value="神奈川">神奈川</option>
-                </select>
-              </div>
+              <p class="text"><?= $inputs['origin'] ?></p>
             </div>
 
             <!-- Eメール -->
             <div class="row email">
               <p class="label-text">Eメール<span class="alert"> ※</span></p>
-              <input type="email" class="input-init input-area is-fullWidth" name="email" placeholder="ex) hoge@example.com" required>
+              <p class="text"><?= $inputs['email'] ?></p>
             </div>
 
             <!-- 電話番号 -->
             <div class="row tel">
               <p class="label-text">電話番号</p>
-              <input type="tel" class="input-init input-area is-fullWidth" name="tel" placeholder="ex) 09012345678">
+              <p class="text"><?= $inputs['tel'] ?></p>
             </div>
 
             <!-- パスワード -->
             <div class="row password">
               <p class="label-text">パスワード<span class="alert"> ※</span></p>
-              <input type="password" class="input-init input-area is-fullWidth" name="password">
-            </div>
-            <div class="row password">
-              <p class="label-text">パスワード(確認用)<span class="alert"> ※</span></p>
-              <input type="password" class="input-init input-area is-fullWidth" name="password-confirm">
+              <p class="text">入力したパスワード</p>
             </div>
 
             <!-- 複数チェック -->
             <div class="row course">
               <p class="label-text">希望コース</p>
-              <div class="course-option">
-                <input type="checkbox" name="course" value="frontend" id="frontend">
-                <label class="course-option-text" for="frontend">フロントエンド</label>
-              </div>
-              <div class="course-option">
-                <input type="checkbox" name="course" value="backend" id="backend">
-                <label class="course-option-text" for="backend">バックエンド</label>
-              </div>
-              <div class="course-option">
-                <input type="checkbox" name="course" value="app" id="app">
-                <label class="course-option-text" for="app">アプリ</label>
-              </div>
+              <p class="text"><?= $inputs['course'] ?></p>
             </div>
 
             <!-- 備考 -->
             <div class="row remarks">
               <p class="label-text">備考</p>
-              <textarea class="input-init input-area is-fullWidth" name="remarks" placeholder="何かあればご記入ください"></textarea>
+              <p class="text"><?= $inputs['remarks'] ?></p>
             </div>
 
             <!-- 送信ボタン -->
